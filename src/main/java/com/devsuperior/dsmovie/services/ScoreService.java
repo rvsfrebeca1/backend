@@ -33,8 +33,7 @@ public class ScoreService {
     }
     @Transactional(readOnly = true)
     public ScoreDTO findById(Long id) {
-        //Movie result = movieRepository.findById(id).get();
-        //return result;
+
         return new ScoreDTO(scoreRepository.findById(id).get());
     }
     @Transactional
